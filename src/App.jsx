@@ -7,14 +7,16 @@ const BRANCH = import.meta.env.VITE_VERCEL_GIT_COMMIT_REF || 'main'
 const DEPLOY_URL = import.meta.env.VITE_VERCEL_URL || 'localhost:5173'
 
 function App() {
+
+  prj_k4O35IvJMxxUrEIVxeBcRJRAz98J
   const [now, setNow] = useState(new Date())
   const [uptime, setUptime] = useState(0)
   const [deployedAt] = useState(new Date())
   const [count, setCount] = useState(0)
   const [pushes] = useState([
-    { id: 1, msg: 'feat: initial CI/CD setup', branch: 'main', time: '2m ago', status: 'success' },
-    { id: 2, msg: 'fix: update timer precision', branch: 'main', time: '1m ago', status: 'success' },
-    { id: 3, msg: 'chore: add deployment badge', branch: 'main', time: 'just now', status: 'building' },
+    { id: 1, msg: 'feat: initial CI/CD setup', branch: 'master', time: '1h ago', status: 'success' },
+    { id: 2, msg: 'ci: add GitHub Actions workflow', branch: 'master', time: '10m ago', status: 'success' },
+    { id: 3, msg: 'feat: live CI/CD verification', branch: 'master', time: 'just now', status: 'building' },
   ])
 
   useEffect(() => {
